@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GitHub Pages 리다이렉션</title>
+    <script type="text/javascript">
+      // 소문자 URL을 대문자 URL로 리다이렉션
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+
+      // GitHub Pages의 저장소 이름이 MyPage인 경우
+      if (
+        l.pathname.toLowerCase().indexOf('/mypage') === 0 &&
+        l.pathname !== '/MyPage/'
+      ) {
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            '/MyPage/' +
+            l.pathname
+              .slice(pathSegmentsToKeep + 1)
+              .split('/')
+              .join('/') +
+            l.search +
+            l.hash
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>페이지를 리다이렉션하는 중입니다...</h1>
+    <p>
+      자동으로 리다이렉션되지 않는 경우,
+      <a href="https://Sionparadox.github.io/MyPage/">여기</a>를 클릭하세요.
+    </p>
+  </body>
+</html>
