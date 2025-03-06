@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-800 font-sans;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-6xl mx-auto px-4;
+  }
+
+  .btn {
+    @apply inline-block bg-primary text-white px-4 py-2 rounded font-medium transition-colors hover:bg-primary-dark;
+  }
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
